@@ -27,8 +27,8 @@ public class LoanManagementController {
 	@Autowired
 	LoanService loanService;
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoanManagementController.class);
-
-	@RequestMapping(path = "/loan/health", method = RequestMethod.GET)
+	
+	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public ResponseEntity<?> healthCheckup() {
 		LOGGER.info("AWS Health Check");
 		return new ResponseEntity<>("", HttpStatus.OK);
